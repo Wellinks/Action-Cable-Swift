@@ -88,7 +88,7 @@ public class ACSerializer {
             let payload: [String : Any] = [
                 "command": command.rawValue,
                 "identifier": try identifier.toJSON(options: .sortedKeys),
-                "data": try data.toJSON()
+                "data": data
             ]
             return payload
         case .subscribe, .unsubscribe:
